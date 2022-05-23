@@ -1,7 +1,11 @@
 from math import sqrt
 
 
-sol = '''
+
+
+
+def formula(a,b,c):
+    sol = '''
         _______
 x = -b±√b²-4ac
     ____________
@@ -32,9 +36,6 @@ x = {7}      OR   x = {8}
 💥💥💥💥💥💥💥💥💥💥💥💥💥💥
 
 '''
-
-
-def formula(a,b,c):
     D = b**2-4*a*c  
     if D < 0:
         return
@@ -49,3 +50,6 @@ def formula(a,b,c):
     
     return sol.format(a,b,c,D,e,f,g,y,z)
 
+
+if __name__ == '__main__':
+    print(formula(1,-5,6))

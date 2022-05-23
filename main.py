@@ -1,5 +1,5 @@
 from math import sqrt
-from formula import formula
+import formula
 
 class Quadratic:
     def __init__(self,a,b,c):
@@ -13,11 +13,10 @@ class Quadratic:
         parameters(method: default->formula)
         '''
         if method == 'formula':
-            print(formula(self.a,self.b,self.c))
+            solution = formula.formula(self.a,self.b,self.c)
+            if solution:
+                print(solution)
             
 
-
-
-if __name__ == '__main__':
-    equ = Quadratic(1,-4,4)
-    equ.solve()
+equ = Quadratic(1,-5,6)
+equ.solve()
